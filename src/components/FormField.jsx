@@ -13,11 +13,11 @@ export default ({ name, type, placeholder, handleInput, required = false, option
   }
 
   const basicInput = (
-    <input type={type} placeholder={placeholder} onInput={validateThenDelegate} required={required} {...otherAttributes} />
+    <input type={type} name={name} placeholder={placeholder} onInput={validateThenDelegate} required={required} {...otherAttributes} />
   )
 
   const selectInput = (
-    <select required={required} defaultValue={0} onChange={validateThenDelegate} {...otherAttributes}>
+    <select name={name} required={required} defaultValue={0} onChange={validateThenDelegate} {...otherAttributes}>
       <option value={0} disabled>Please select...</option>
       {options.map(option => <option key={option.value} value={option.value}>{option.text}</option>)}
     </select>
