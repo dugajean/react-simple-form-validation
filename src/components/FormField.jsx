@@ -13,7 +13,14 @@ export default ({ name, type, placeholder, handleInput, required = false, option
   }
 
   const basicInput = (
-    <input type={type} name={name} placeholder={placeholder} onInput={validateThenDelegate} required={required} {...otherAttributes} />
+    <input 
+      type={type} 
+      name={name} 
+      placeholder={placeholder} 
+      onInput={validateThenDelegate} 
+      required={required} 
+      {...otherAttributes} 
+    />
   )
 
   const selectInput = (

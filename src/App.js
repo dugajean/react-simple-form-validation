@@ -48,10 +48,22 @@ class App extends React.Component {
         />
         {this.state.errors.name ?? null}
 
-        <FormField name="email" type="email" required={true} placeholder="Type in your email..." handleInput={this.handleInput} />
+        <FormField 
+          name="email" 
+          type="email" 
+          required={true} 
+          placeholder="Type in your email..." 
+          handleInput={this.handleInput} 
+        />
         {this.state.errors.email ?? null}
 
-        <FormField name="gender" type="select" required={true} options={genders} handleInput={this.handleInput} />
+        <FormField 
+          name="gender" 
+          type="select" 
+          required={true} 
+          options={genders} 
+          handleInput={this.handleInput} 
+        />
         {this.state.errors.gender ?? null}
 
         <button>Submit</button>
